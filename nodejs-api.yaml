@@ -1,0 +1,34 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nodejs-api
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: nodejs-api
+  template:
+    metadata:
+      labels:
+        app: nodejs-api
+    spec:
+      containers:
+      - name: nodejs-api
+        image: hashicorp/http-echo
+        args:
+        - "-text=Hello from Node.js Backend API running on Kubernetes Cluster 🚀"
+        ports:
+        - containerPort: 5678
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: nodejs-api-service
+spec:
+  type: NodePort
+  selector:
+    app: nodejs-api
+  ports:
+  - port: 5678
+    targetPort: 5678
+    nodePort: 30082

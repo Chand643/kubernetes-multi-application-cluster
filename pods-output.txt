@@ -1,0 +1,15 @@
+NAME                           READY   STATUS    RESTARTS   AGE     IP                NODE      NOMINATED NODE   READINESS GATES
+apache-app-85f7d4dd9b-9vqhg    1/1     Running   0          2d22h   192.168.235.135   worker1   <none>           <none>
+apache-app-85f7d4dd9b-s4xtt    1/1     Running   0          2d22h   192.168.182.7     worker3   <none>           <none>
+apache-app-85f7d4dd9b-vgqc6    1/1     Running   0          2d22h   192.168.189.71    worker2   <none>           <none>
+mysql-db-59655dc955-vrjpq      1/1     Running   0          2d20h   192.168.189.74    worker2   <none>           <none>
+nginx-app-65b764f7bd-5jshj     1/1     Running   0          2d22h   192.168.182.6     worker3   <none>           <none>
+nginx-app-65b764f7bd-6hdm5     1/1     Running   0          2d22h   192.168.189.70    worker2   <none>           <none>
+nginx-app-65b764f7bd-9pvs7     1/1     Running   0          2d22h   192.168.189.69    worker2   <none>           <none>
+nginx-app-65b764f7bd-nmjfr     1/1     Running   0          2d22h   192.168.182.5     worker3   <none>           <none>
+nginx-app-65b764f7bd-nzr5z     1/1     Running   0          2d22h   192.168.235.133   worker1   <none>           <none>
+nginx-app-65b764f7bd-qprfh     1/1     Running   0          2d22h   192.168.235.134   worker1   <none>           <none>
+nodejs-api-75997c84bc-9gb86    1/1     Running   0          2d22h   192.168.182.8     worker3   <none>           <none>
+nodejs-api-75997c84bc-hh2lq    1/1     Running   0          2d22h   192.168.189.72    worker2   <none>           <none>
+nodejs-api-75997c84bc-whpj8    1/1     Running   0          2d22h   192.168.235.136   worker1   <none>           <none>
+redis-cache-5b8949d899-dbdcj   1/1     Running   0          2d20h   192.168.235.137   worker1   <none>           <none>

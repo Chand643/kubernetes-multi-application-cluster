@@ -1,0 +1,54 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: apache-website
+data:
+  index.html: |
+    <!DOCTYPE html>
+    <html>
+    <head>
+      <title>Apache App on Kubernetes</title>
+      <style>
+        body {
+          margin: 0;
+          font-family: Arial, sans-serif;
+          background: linear-gradient(135deg, #7c2d12, #f97316);
+          color: white;
+          text-align: center;
+        }
+        .container {
+          margin: 80px auto;
+          max-width: 850px;
+          padding: 40px;
+          border-radius: 20px;
+          background: rgba(255,255,255,0.15);
+          box-shadow: 0 0 25px rgba(0,0,0,0.35);
+        }
+        h1 { font-size: 42px; }
+        p { font-size: 20px; line-height: 1.6; }
+        .cards {
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+          gap: 15px;
+          margin-top: 30px;
+        }
+        .card {
+          padding: 20px;
+          border-radius: 15px;
+          background: rgba(255,255,255,0.18);
+        }
+      </style>
+    </head>
+    <body>
+      <div class="container">
+        <h1>🔥 Apache Web Application</h1>
+        <p>This Apache application is deployed inside a Kubernetes cluster using Deployments, Pods and NodePort Service.</p>
+        <div class="cards">
+          <div class="card">Apache HTTPD</div>
+          <div class="card">3 Replicas</div>
+          <div class="card">NodePort Access</div>
+        </div>
+        <p>Running successfully on worker nodes with Kubernetes load balancing.</p>
+      </div>
+    </body>
+    </html>
