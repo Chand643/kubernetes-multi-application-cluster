@@ -5,9 +5,9 @@
 
 This project is built on a 4-node Kubernetes cluster using Ubuntu virtual machines.
 
-| Node | IP Address | Role |
-|---|---|---|
-| Master Node | 192.168.0.2 | Control Plane |
+| Node          | IP Address   | Role              |
+|---            |---          |---                 |
+| Master Node   | 192.168.0.2 | Control Plane      |
 | Worker Node 1 | 192.168.0.3 | Application Worker |
 | Worker Node 2 | 192.168.0.4 | Application Worker |
 | Worker Node 3 | 192.168.0.5 | Application Worker |
@@ -16,22 +16,22 @@ The master node manages the Kubernetes cluster, while the worker nodes run appli
 
 ## Architecture Flow
 
-```text
-Internet
-   |
-Public IP / NAT
-   |
-Master Node - 192.168.0.2
-   |
-Kubernetes Control Plane
-   |
+                   ```text
+                  Internet
+                     |
+               Public IP / NAT
+                     |
+            Master Node - 192.168.0.2
+                     |
+           Kubernetes Control Plane
+                     |
 ------------------------------------------------
 |                    |                         |
-Worker 1             Worker 2                  Worker 3
-192.168.0.3          192.168.0.4               192.168.0.5
-|                    |                         |
-Nginx Pods           Apache Pods               Node.js Pods
-MySQL Pod            Redis Pod                 Monitoring Pods
+Worker 1             Worker 2                 Worker 3
+192.168.0.3          192.168.0.4              192.168.0.5
+    |                    |                         |
+Nginx Pods           Apache Pods              Node.js Pods
+ MySQL Pod            Redis Pod               Monitoring Pods
 ````
 
 ## Components Used
